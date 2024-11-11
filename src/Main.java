@@ -1,5 +1,9 @@
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 //generar productos
         Producto [] prod = GeneradorProductos.generadorProductos(10);
         AlmacenGestion almacen = new AlmacenGestion(prod);
@@ -10,6 +14,9 @@ public class Main {
         almacen.ImprimeListasProductos();
         TPM.imprimirEstadisticas();
         TSM.imprimirEstadisticas();
-
+        FileWriter escritor = new FileWriter("EstadisticaTienda2daMano.txt");
+        PrintWriter pw = new PrintWriter(escritor);
+        TSM.imprimirEstadisticas(pw);
+        pw.close();
     }
 }

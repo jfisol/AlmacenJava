@@ -1,3 +1,4 @@
+import java.io.PrintWriter;
 import java.text.DecimalFormat;
 
 public class Producto {
@@ -61,5 +62,11 @@ public class Producto {
         DecimalFormat decimales = new DecimalFormat("00.00");
         DecimalFormat decimalesP = new DecimalFormat("00.0");
         System.out.println(" ID: " +this.getID() + " Peso: " + decimalesP.format(this.getPeso()) + " valor: " +decimales.format(this.getValor()) + " Asignado: "+ this.isAsignado() + " Clase: " + this.getClase());
+    }
+
+    public void imprimir (PrintWriter salida){
+        DecimalFormat decimales = new DecimalFormat("00.00");
+        DecimalFormat decimalesP = new DecimalFormat("00.0");
+        salida.println(" ID: " +this.getID() + " Peso: " + decimalesP.format(this.getPeso()) + " valor: " +decimales.format(this.getValor()) + " Asignado: "+ this.isAsignado() + " Clase: " + this.getClase());
     }
 }

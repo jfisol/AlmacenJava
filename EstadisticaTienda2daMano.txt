@@ -1,0 +1,7 @@
+ Lista de Productos Tienda del Centro
+ Nombre Tienda: Tienda Segunda Mano
+ ID: 381378 Peso: 19.7 valor: 558.00 Asignado: true Clase: B
+ ID: 949321 Peso: 55.8 valor: 344.00 Asignado: true Clase: C
+ ID: 8032 Peso: 88.9 valor: 442.00 Asignado: true Clase: B
+ ID: 983271 Peso: 79.7 valor: 520.33 Asignado: true Clase: B
+El beneficio de la tienda SegundaMano1864.333881970811

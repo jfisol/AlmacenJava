@@ -1,3 +1,5 @@
+import java.io.PrintWriter;
+
 public class TiendaSegundaMano extends Producto {
 
     private String nombre;
@@ -48,6 +50,18 @@ public class TiendaSegundaMano extends Producto {
             beneficio += stock[i].getValor();
         }
         System.out.println("El beneficio de la tienda SegundaMano" + beneficio);
+
+    }
+    public void imprimirEstadisticas(PrintWriter salida){
+        salida.println(" Lista de Productos Tienda del Centro");
+        // super.imprimir();
+        double beneficio =0.0;
+        salida.println(" Nombre Tienda: " + getNombre());
+        for(int i = 0; i<stock.length ; i++){
+            stock[i].imprimir(salida);
+            beneficio += stock[i].getValor();
+        }
+        salida.println("El beneficio de la tienda SegundaMano" + beneficio);
 
     }
 
